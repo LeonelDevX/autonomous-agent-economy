@@ -1,0 +1,17 @@
+.env
+config.yaml
+*.key
+*.pem
+wallet*
+secrets/
+private/
+logs/
+runtime/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+dist/
+build/
+*.egg-info/
