@@ -1,0 +1,42 @@
+system:
+  mode: simulation
+  require_real_mode_confirmation: true
+  workspace: runtime/workspace
+  database: runtime/agent_economy.db
+ollama:
+  host: http://127.0.0.1:11434
+  profile: balanced
+  small_model: llama3.2:3b
+  balanced_model: qwen2.5:7b
+  powerful_model: llama3.1:8b
+internet:
+  enabled: false
+  allowlist:
+    - example.com
+    - docs.python.org
+  denylist: []
+  timeout_seconds: 10
+  requests_per_minute: 20
+treasury:
+  starting_balance: 1000
+  reserve_percent: 0.5
+  compute_percent: 0.3
+  growth_percent: 0.2
+  daily_spending_limit: 100
+  transaction_limit: 25
+  max_agent_spend: 50
+  minimum_reserve: 250
+  approval_threshold: 20
+agents:
+  max_agents: 12
+  max_agent_depth: 2
+  max_agent_budget: 50
+  global_budget: 500
+approvals:
+  low_auto: true
+  medium_auto_under_policy: true
+  high_requires_manual: true
+  critical_requires_manual: true
+security:
+  dashboard_host: 127.0.0.1
+  dashboard_port: 8765
